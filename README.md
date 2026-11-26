@@ -31,4 +31,4 @@ Al terminar se descarga `prospectividad_resultados.zip` (GeoJSON, KMZ, CSV, GeoT
 
 Sentinel-2 ve **arcillas/hidroxilos** y **óxidos de Fe**. No separa argílica avanzada, fílica ni propilítica. Las zonas son hipótesis de priorización, no blancos confirmados.
 
-Datos Sentinel-2 © Copernicus/ESA. DEM Copernicus GLO-30. Flujo equivalente a una parte de [geoia.site/prospectividad](https://geoia.site/prospectividad/).
+Datos Sentinel-2 © Copernicus/ESA. DEM Copernicus GLO-30. Flujo equivalente a una parte de [geoia.site](https://geoia.site).
