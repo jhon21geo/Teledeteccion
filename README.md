@@ -20,7 +20,7 @@ Este repositorio es un **cuaderno de Google Colab**. No hace falta instalar Pyth
 | `subir` | Selector de Colab — bien para archivos chicos |
 | `drive` | GeoTIFF grande (p. ej. **200 MB**) desde Google Drive |
 
-Al terminar se descarga `prospectividad_resultados.zip` (GeoJSON, KMZ, CSV, GeoTIFF).
+En **Análisis espectral** aparece el **plano de alteraciones** (RGB con arcillas en amarillo y óxidos en rojo). Al terminar se descarga `prospectividad_resultados.zip` (PNG del plano, GeoJSON, KMZ, CSV, GeoTIFF).
 
 ## Imagen de 200 MB
 
