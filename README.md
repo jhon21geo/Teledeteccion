@@ -1,25 +1,34 @@
-# Prospectividad por alteración hidrotermal con Sentinel-2 (cuaderno Colab)
+# Teledetección — prospectividad Sentinel-2 (solo Colab)
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jhon21geo/geoia-apps/blob/main/prospectividad/colab/prospectividad_sentinel2.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jhon21geo/Teledeteccion/blob/main/prospectividad_sentinel2.ipynb)
 
-Flujo reproducible en 4 pasos, equivalente a una parte de la app web [Prospectividad](https://geoia.site/prospectividad/):
+Este repositorio es un **cuaderno de Google Colab**. No hace falta instalar Python, GDAL ni rasterio en tu computadora.
 
-1. **Datos** — imagen de ejemplo, descarga Sentinel-2 L2A de tu zona (AWS Earth Search, sin cuenta) o sube tu GeoTIFF.
-2. **Análisis espectral** — M1 índices de bandas · M2 PCA dirigido (Crosta) · M3 ángulo espectral (SAM) → consenso ≥ 2 de 3.
-3. **Lineamientos** — Canny + Hough (opcional con DEM Copernicus 30 m) y diagrama de rosa.
-4. **Zonas prioritarias** — puntaje = alteración + densidad de lineamientos → GeoJSON, KMZ, CSV y GeoTIFF.
+## Cómo ejecutarlo
 
-## Usar tu propia imagen
-* **Descargar:** `MODO = 'descargar'` y cambia `LON, LAT`, `LADO_KM`, `FECHAS`.
-* **Subir:** `MODO = 'subir'` con un GeoTIFF de 6 bandas en orden **B2, B3, B4, B8, B11, B12** (reflectancia 0–1 o entero ×10 000).
+1. Pulsa **Abrir en Colab**.
+2. En Colab: **Entorno de ejecución → Ejecutar todo**.
+3. La primera celda comprueba que estás en Colab, instala `rasterio` y clona este repo (imagen de ejemplo).
+4. Para tu zona, en **Parámetros** cambia `MODO`, `LON`, `LAT` y vuelve a ejecutar.
+
+| `MODO` | Qué hace |
+|---|---|
+| `ejemplo` | Usa `data/prospectividad_sentinel2.tif` (ya viene en el repo) |
+| `descargar` | Sentinel-2 L2A de tu `LON, LAT` (AWS Earth Search, sin cuenta) |
+| `subir` | Selector de archivos de Colab — GeoTIFF de 6 bandas **B2, B3, B4, B8, B11, B12** |
+
+Al terminar se descarga `prospectividad_resultados.zip` (GeoJSON, KMZ, CSV, GeoTIFF).
 
 ## Contenido
-| Archivo | Descripción |
+
+| Archivo | Rol |
 |---|---|
-| `prospectividad_sentinel2.ipynb` | Cuaderno (ya ejecutado, se ven los resultados) |
-| `data/prospectividad_sentinel2.tif` | Imagen de ejemplo (Sentinel-2 L2A, 10 m, 6 bandas) |
+| `prospectividad_sentinel2.ipynb` | Cuaderno (ábrelo solo en Colab) |
+| `data/prospectividad_sentinel2.tif` | Escena de ejemplo, Sentinel-2 L2A, 10 m, 6 bandas |
+| `requirements-colab.txt` | Paquetes que Colab instala en la primera celda |
 
-## Alcance y límites
-Sentinel-2 distingue **arcillas/hidroxilos** y **óxidos de Fe**; no separa argílica avanzada, fílica ni propilítica (requiere SWIR fino: ASTER, WorldView-3, EMIT, EnMAP, PRISMA). Las zonas son hipótesis de priorización, no blancos confirmados. La validación con muestras de campo es opcional y solo concluyente con ≥ 30 puntos por clase.
+## Alcance
 
-Datos Sentinel-2 © Copernicus/ESA (acceso abierto). DEM Copernicus GLO-30.
+Sentinel-2 ve **arcillas/hidroxilos** y **óxidos de Fe**. No separa argílica avanzada, fílica ni propilítica. Las zonas son hipótesis de priorización, no blancos confirmados.
+
+Datos Sentinel-2 © Copernicus/ESA. DEM Copernicus GLO-30. Flujo equivalente a una parte de [geoia.site/prospectividad](https://geoia.site/prospectividad/).
