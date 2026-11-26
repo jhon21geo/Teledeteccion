@@ -1,0 +1,4 @@
+# Lo instala la primera celda del cuaderno en Colab.
+# numpy, scipy, scikit-learn, scikit-image y matplotlib ya vienen en Colab.
+rasterio
+pystac-client
