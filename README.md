@@ -2,11 +2,13 @@
 
 [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jhon21geo/Teledeteccion/blob/main/prospectividad_sentinel2.ipynb)
 
+**Enlace directo:** <https://colab.research.google.com/github/jhon21geo/Teledeteccion/blob/main/prospectividad_sentinel2.ipynb>
+
 Este repositorio es un **cuaderno de Google Colab**. No hace falta instalar Python, GDAL ni rasterio en tu computadora.
 
 ## Cómo ejecutarlo
 
-1. Pulsa **Abrir en Colab**.
+1. Abre el [enlace directo a Colab](https://colab.research.google.com/github/jhon21geo/Teledeteccion/blob/main/prospectividad_sentinel2.ipynb).
 2. En Colab: **Entorno de ejecución → Ejecutar todo**.
 3. La primera celda comprueba que estás en Colab, instala `rasterio` y clona este repo (imagen de ejemplo).
 4. Para tu zona, en **Parámetros** cambia `MODO`, `LON`, `LAT` y vuelve a ejecutar.
